@@ -12,5 +12,31 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  client_service:
+    build: ./client_service
+    container_name: client-service
+    depends_on:
+      - postgres
+    volumes:
+      - ./Scripts:/app/Scripts
+    ports:
+      - "5000:5000"
+    environment:
+      DB_HOST: 127.0.0.1
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: postgres
+    stdin_open: true
+    tty: true
+    command: >
+      sh -c "
+        echo '⏳ Waiting for Postgres...';
+        until pg_isready -h postgres -U postgres; do
+          sleep 1;
+        done;
+        echo '✅ Postgres is ready. Container is idle.';
+        tail -f /dev/null
+      "
 volumes:
   pgdata:
