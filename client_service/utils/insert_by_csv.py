@@ -1,5 +1,6 @@
 import psycopg2
 from polars import read_csv
+from ._config import PARAMS
 
 tables = {'products', 'sales', 'stores'}
 def insert_by_row(row, table, cursor):
@@ -56,11 +57,7 @@ def insert_csv(csv_path, table):
 
     try:
         conn = psycopg2.connect(
-            host="127.0.0.1",
-            port="5432",
-            database="postgres",
-            user="postgres",
-            password="postgres"
+            **PARAMS
         )
     except Exception as e:
         raise Exception(f"Error connecting to database: {e}") from e
