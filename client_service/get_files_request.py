@@ -1,14 +1,9 @@
 from utils.get_files_request import get_files_request
 import argparse
 
-
-# Create the parser
+# Parse arguments
 parser = argparse.ArgumentParser()
-
-# Add an argument
 parser.add_argument("url", help="url to download")
-
-# Parse the argument
 args = parser.parse_args()
 
 # Check if url is empty
