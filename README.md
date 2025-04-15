@@ -3,12 +3,12 @@
 This project provides a PostgresSQL database to analyse the sales of a company based on their data provied with a client service to import, modify and extract data from the database.
 
 ## Infrastruture schema
-![Schema](imgs/schema.png.png)
+![Schema](imgs/schema.png)
 
 The schema of the infrastruture is shown in the image above.
 ## Database schema
 
-![Schema_db](imgs/schema_db.png.png)
+![Schema_db](imgs/schema_db.png)
 
 The schema of the database is shown in the image above.
 
