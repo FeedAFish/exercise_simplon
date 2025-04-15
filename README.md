@@ -78,6 +78,30 @@ To access sql shell:
 PGPASSWORD=postgres psql -h postgres -U postgres -d postgres
 ```
 
+## Results
+
+### Turnover
+
+1. Total turnover is **5268.78**.
+2. The product with highest turnover is product with id **REF004** (**1679.79** in total).
+3. **REF002** and **REF003** are the 2 lowest in turnover.
+
+### Sales by products
+
+1. **REF005** is the best selling with **35** products sold in total.
+2. **REF003** has **15** products sold, which is the lowest, during this period.
+
+### Sales by region (city)
+
+1. **Marseille** leads the board with **27** products sold.
+2. **Lille** and **Strasbourg**'s shops are not having good time with **7** and **11** in number of sales respectively.
+
+## Data URLs
+
+1. [Products](https://docs.google.com/spreadsheets/d/e/2PACX-1vSawI56WBC64foMT9pKCiY594fBZk9Lyj8_bxfgmq-8ck_jw1Z49qDeMatCWqBxehEVoM6U1zdYx73V/pub?gid=0&single=true&output=csv)
+2. [Stores](https://docs.google.com/spreadsheets/d/e/2PACX-1vSawI56WBC64foMT9pKCiY594fBZk9Lyj8_bxfgmq-8ck_jw1Z49qDeMatCWqBxehEVoM6U1zdYx73V/pub?gid=714623615&single=true&output=csv)
+3. [Sales](https://docs.google.com/spreadsheets/d/e/2PACX-1vSawI56WBC64foMT9pKCiY594fBZk9Lyj8_bxfgmq-8ck_jw1Z49qDeMatCWqBxehEVoM6U1zdYx73V/pub?gid=760830694&single=true&output=csv)
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
