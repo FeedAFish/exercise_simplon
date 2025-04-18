@@ -46,6 +46,12 @@ To create tables inside database:
 PGPASSWORD=postgres psql -h postgres -U postgres -d postgres -f Scripts/init.sql
 ```
 
+This command will create all need tables for the database, included:
+- **products**: product id, reference, name and stock.
+- **stores**: id with city located and number of people who is working there
+- **sales**: sales id with date, product reference, store id, number of sold product.
+- **sales_by_city**, **sales_by_product**, **turnover** and **total_turnover**: auto update after delete and insert new values into sales table.
+
 ### Commands
 To receive file by request url (only tested on google sheet):
 
@@ -61,14 +67,6 @@ To import from a csv to your database:
 # In bash shell of client-service
 # table_name for this project is stores, products and sales
 python table_insert_by_csv.py table_name -f 'csv_path'
-```
-
-To create/update changes to aggregate views:
-
-```bash
-# In bash shell of client-service
-# 'postgres' is by default
-PGPASSWORD=postgres psql -h postgres -U postgres -d postgres -f Scripts/update_view.sql
 ```
 
 To access sql shell:
